@@ -6,7 +6,7 @@ const cors = require("cors")
 app.use(express.json())
 require("dotenv").config()
 
-const PORT =process.env.PORT || 8001
+
 
 app.get("/", async(req,res)=>{
     const data= await UserModel.find()
@@ -38,7 +38,7 @@ app.delete("/:todoId", async(req,res)=>{
   })
 
 
-app.listen(PORT,async()=>{
+app.listen(4000,async()=>{
     try{
      await connection
         console.log("connection to db successfully")
